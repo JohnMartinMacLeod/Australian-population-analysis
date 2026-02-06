@@ -34,6 +34,7 @@ long_df = long_df.drop(columns=["measure"])
 long_df["year"] = long_df["year"].str.split("-").str[1].astype(int)
 
 long_df["age"] = long_df["age"].replace("100 and over", "100").astype(int)
+long_df["population"] = long_df["population"].astype(int)
 
 long_df = long_df[["year", "sex", "age", "population"]]
 
