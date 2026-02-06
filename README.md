@@ -26,6 +26,23 @@ To validate this interpretation, I manually cross-checked reported "Persons" pop
 
 This validation step confirmed that the "Persons" values consistently matched the combined male and female totals, indicating that the category represents aggregated population counts rather than an additional sex category.
 
+## Data Structure Transformation
+
+### Raw Data (Wide Format)
+
+![Raw population 1 data structure](images/01_before_cleaning_sample.png)
+
+![Raw population 2 data structure](images/02_before_cleaning_sample.png)
+
+The original ABS dataset was provided in a wide format and split into two separate sheets.
+The dataset had age, sex, and metadata embedded in column names, resulting in over 300 columns across both sheets.
+
+### Cleaned Data (Long Format)
+
+![Clean population data structure](images/after_cleaning_sample.png)
+
+The dataset has been reshaped into a clean, long format containing one element per row, allowing for the data to be easily filtered, grouped, or validated.
+
 ## Final Table Schema
 
 population_by_age:
